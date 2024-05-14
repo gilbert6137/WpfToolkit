@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfToolkit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfToolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- 上半部分佔整個視窗的90% -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.1*" />
+            <!-- 0.1 表示10%，剩餘的90%由第一行佔據 -->
+        </Grid.RowDefinitions>
+
+        <!-- 上半部分的Grid -->
+        <Grid Grid.Row="0">
+            <ContentControl Content="{Binding UserControlContent}" />
+        </Grid>
+
+        <!-- 下半部分佔整個視窗的10% -->
+        <Grid Grid.Row="1">
+            <!-- 新增按鈕 -->
+            <Button Content="Add User" Command="{Binding AddUserCommand}"/>
+        </Grid>
+    </Grid>
+</Window>
