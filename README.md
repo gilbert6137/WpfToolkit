@@ -1,5 +1,3 @@
-當然，這是 markdown 格式的 Readme.md 文件內容，您可以直接將其複製並粘貼到您的 readme.md 文件中：
-
 ````markdown
 # WpfToolkit
 
